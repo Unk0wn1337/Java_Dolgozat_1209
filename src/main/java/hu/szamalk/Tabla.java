@@ -5,6 +5,7 @@ import java.util.Random;
 public class Tabla {
     private char[][] t;
     private char uresCella;
+    private static Random rnd = new Random();
 
     public Tabla(char uresCella) {
         this.t = new char[8][8];
@@ -30,10 +31,9 @@ public class Tabla {
         }
 
         public void elhelyez(){
-            Random rnd = new Random();
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++) {
-                    if (rnd.nextInt(0,5) == i) {
+                    if (rnd.nextInt(0,9) == j) {
                         t[i][j] = 'K';
                     }
                 }
