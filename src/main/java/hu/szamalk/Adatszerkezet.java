@@ -7,7 +7,7 @@ public class Adatszerkezet {
     private String[] nev;
     private String[] randomBetuk;
     private static Random rnd;
-    TreeSet<String> abcRendezLista;
+    private TreeSet<String> abcRendezLista;
 
     public Adatszerkezet() {
         this.nev = new String[5];
@@ -70,15 +70,20 @@ public class Adatszerkezet {
 
 
     public void abcRendez() {
-        for (int i = 0; i < randomBetuk.length; i++) {
-            abcRendezLista.add(randomBetuk[i]);
-        }
+        abcRendezLista.addAll(Arrays.asList(randomBetuk));
     }
 
 
-    public List<String> getAbcRendezLista() {
-        return Collections.unmodifiableList(abcRendezLista);
-    }
-
+  //  public List<String> getAbcRendezLista() {
+   //     return Collections.unmodifiableList(abcRendezLista);
+  //  }
     
+    public void betuMegszamolas(){
+        HashMap<Integer, String> a = new HashMap<>();
+        for(int i = 0; i < randomBetuk.length; i++){
+            a.put(i,randomBetuk[i]);
+        }
+
+    }
+
 }
