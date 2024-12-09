@@ -80,7 +80,7 @@ public class Adatszerkezet {
 
     public void betuMegszamolas(){
         HashMap<String, Integer> db = new HashMap<>();
-        for(String a : nev){
+        for(String a : randomBetuk){
             db.put(a, db.getOrDefault(a,0)+1);
         }
         System.out.println(db);
