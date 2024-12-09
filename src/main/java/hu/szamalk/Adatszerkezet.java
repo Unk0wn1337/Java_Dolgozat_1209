@@ -1,19 +1,21 @@
 package hu.szamalk;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 
 public class Adatszerkezet {
     private String[] nev;
     private String[] randomBetuk;
     private static Random rnd;
+    TreeSet<String> abcRendezLista;
 
     public Adatszerkezet() {
         this.nev = new String[5];
         this.randomBetuk = new String[10];
+        abcRendezLista = new TreeSet<>();
         nevBedrotozas();
         abcBedrotoz();
+
     }
 
     public void nevBedrotozas(){
@@ -66,10 +68,17 @@ public class Adatszerkezet {
         return f;
     }
 
+
+    public void abcRendez() {
+        for (int i = 0; i < randomBetuk.length; i++) {
+            abcRendezLista.add(randomBetuk[i]);
+        }
+    }
+
+
+    public List<String> getAbcRendezLista() {
+        return Collections.unmodifiableList(abcRendezLista);
+    }
+
     
-
-
-
-
-
 }
