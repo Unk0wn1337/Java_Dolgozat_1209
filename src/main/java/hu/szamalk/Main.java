@@ -23,6 +23,7 @@ public class Main {
         System.out.println("Név és 10 betű:");
         System.out.println(adat.nevMegjelenit());
         System.out.println(adat.randomBetukMegjelent());
+        adat.betuMegszamolas();
 
 
     }

@@ -77,13 +77,15 @@ public class Adatszerkezet {
   //  public List<String> getAbcRendezLista() {
    //     return Collections.unmodifiableList(abcRendezLista);
   //  }
-    
+
     public void betuMegszamolas(){
-        HashMap<Integer, String> a = new HashMap<>();
-        for(int i = 0; i < randomBetuk.length; i++){
-            a.put(i,randomBetuk[i]);
+        HashMap<String, Integer> db = new HashMap<>();
+        for(String a : nev){
+            db.put(a, db.getOrDefault(a,0)+1);
+        }
+        System.out.println(db);
         }
 
     }
 
-}
+
