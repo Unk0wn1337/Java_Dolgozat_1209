@@ -18,8 +18,11 @@ public class Main {
         System.out.println("Oszlop:"+t.uresOszlopokSzama());
 
         System.out.println("------------- F3 ---------------");
+
         Adatszerkezet adat = new Adatszerkezet();
+        System.out.println("Név és 10 betű:");
         System.out.println(adat.nevMegjelenit());
+        System.out.println(adat.randomBetukMegjelent());
 
 
     }
