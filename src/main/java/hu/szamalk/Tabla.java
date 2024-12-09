@@ -42,9 +42,9 @@ public class Tabla {
 
     public boolean uresOszlop(int oszlop) {
         boolean vanKiralynoBenne = false;
-        for (int i = 0; i < 8; i ++) {
+        for (int i = 0; i < 8; i++) {
             if (oszlop >= 0 && oszlop < 8) {
-                if (t[i][oszlop] == 'K') {
+                if (t[i][oszlop] != 'K') {
                     vanKiralynoBenne = true;
                 }
             }
@@ -64,6 +64,29 @@ public class Tabla {
         return vanKiralynoBenne;
     }
 
+    public int uresOszlopokSzama() {
+        int karakterekSzama = 0;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (t[j][i] != uresCella) {
+                    karakterekSzama++;
+                }
+            }
+        }
+        return karakterekSzama;
+    }
+
+    public int uresSorokSzama() {
+        int karakterekSzama = 0;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (t[i][j] != uresCella) {
+                    karakterekSzama++;
+                }
+            }
+        }
+        return karakterekSzama;
+    }
 }
 
 
