@@ -16,5 +16,11 @@ public class Main {
         System.out.println("9. feladat: Üres oszlopok és sorok száma:");
         System.out.println("Sorok:"+t.uresSorokSzama());
         System.out.println("Oszlop:"+t.uresOszlopokSzama());
+
+        System.out.println("------------- F3 ---------------");
+        Adatszerkezet adat = new Adatszerkezet();
+        System.out.println(adat.nevMegjelenit());
+
+
     }
 }
