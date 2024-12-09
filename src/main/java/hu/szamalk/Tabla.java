@@ -13,35 +13,59 @@ public class Tabla {
         feltolt();
     }
 
-    public void feltolt(){
-        for(int i = 0; i < 8; i++){
-            for(int j = 0; j < 8; j++) {
-                    t[i][j] = uresCella;
-                }
+    public void feltolt() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                t[i][j] = uresCella;
             }
         }
-
-        public void megjelenit() {
-            for (int i = 0; i < 8; i++) {
-                for (int j = 0; j < 8; j++) {
-                    System.out.print(t[i][j]);
-                }
-                System.out.println();
-            }
-        }
-
-        public void elhelyez(){
-            for (int i = 0; i < 8; i++) {
-                for (int j = 0; j < 8; j++) {
-                    if (rnd.nextInt(0,9) == j) {
-                        t[i][j] = 'K';
-                    }
-                }
-            }
-        }
-
-
-
     }
+
+    public void megjelenit() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                System.out.print(t[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    public void elhelyez() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (rnd.nextInt(0, 9) == j) {
+                    t[i][j] = 'K';
+                }
+            }
+        }
+    }
+
+    public boolean uresOszlop(int oszlop) {
+        boolean vanKiralynoBenne = false;
+        for (int i = 0; i < 8; i ++) {
+            if (oszlop >= 0 && oszlop < 8) {
+                if (t[i][oszlop] == 'K') {
+                    vanKiralynoBenne = true;
+                }
+            }
+        }
+        return vanKiralynoBenne;
+    }
+
+    public boolean uresSor(int sor) {
+        boolean vanKiralynoBenne = false;
+        if (sor >= 0 && sor < 8) {
+            for (int j = 0; j < 8; j++) {
+                if (t[sor][j] == 'K') {
+                    vanKiralynoBenne = true;
+                }
+            }
+        }
+        return vanKiralynoBenne;
+    }
+
+}
+
+
 
 
